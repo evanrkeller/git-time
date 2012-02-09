@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $# -ne 2 ] ; then
+  echo "Usage: `basename $0` {search_name} {start_date}"
+  exit $E_BADARGS
+fi
+
 TIMEFILE=~/.timefile.tmp
 
 echo "Using time file: $TIMEFILE"
